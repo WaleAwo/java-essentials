@@ -1,27 +1,26 @@
 package operations.file;
 
-import java.io.*;
+import java.io.*; // Import the File class
 
 public class MyClass {
     public static void main(String[] args) {
 
-        String dirPath = "folder" + File.separator + "anotherFolder"; // folder path e.g. "folder/anotherFolder"
+        String dirPath = "folder" + File.separator + "anotherFolder";
 
         File dir = new File(dirPath);
-        if (!dir.exists()){ // check whether the diretory exists
-            dir.mkdirs(); // creates a directory
+        if (!dir.exists()){ // checks the directory doesn't exist
+            dir.mkdirs(); // creates directory
         } else {
             System.out.println("The directory already exists.");
         }
 
         File file = new File(dirPath +
-                File.separator + "MyFile.txt"); // create a file object in directory path (dirPath)
+                File.separator + "MyFile.txt"); // create a file object
 
-        if(!file.exists()){ // check whether the file exists
+        if(!file.exists()){ // checks the file doesn't exist
             try {
-                file.createNewFile(); // creates an empty file
+                file.createNewFile(); // creates file
             } catch (IOException e) {
-                System.out.println("An error occurred.");
                 e.printStackTrace();
             }
         }
