@@ -10,6 +10,8 @@ public class MyClass {
         File dir = new File(dirPath);
         if (!dir.exists()){ // check whether the diretory exists
             dir.mkdirs(); // creates a directory
+        } else {
+            System.out.println("The directory already exists.");
         }
 
         File file = new File(dirPath +
