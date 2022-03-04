@@ -1,14 +1,16 @@
 package polymorphism;
 
+// Polymorphism means "many forms", and it occurs when we have many classes
+// that are related to each other by inheritance.
+
 public class MyClass {
     public static void main(String[] args) {
-        // jave looks for the type of object at runtime and selects the appropiate overriden methods
 
-        // type of objet is "fulltime"
+        // type of objet is "FullTime"
         Employee e = new FullTime();
         System.out.println("Fulltime employee salary is: " + e.salary());
 
-        // local methods will not be available unless you create an object of that class
+        // methods will not be available unless you create an object of that class
         FullTime ft = new FullTime();
         ft.myMethod();
 
@@ -24,7 +26,7 @@ public class MyClass {
         // overloading example
         MyOverloadingClass moc = new MyOverloadingClass();
         moc.myMethod(2);
-        moc.myMethod("overload", 6);
-        moc.myMethod("overload");
+        moc.myMethod("overload example ", 6);
+        moc.myMethod("overload example");
     }
 }
