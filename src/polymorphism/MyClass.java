@@ -14,7 +14,7 @@ public class MyClass {
         FullTime ft = new FullTime();
         ft.myMethod();
 
-        // type of objet is "contractor"
+        // type of objet is "Contractor"
         e = new Contractor();
         System.out.println("Contractor salary is: " + e.salary());
 
