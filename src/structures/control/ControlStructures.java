@@ -1,5 +1,7 @@
 package structures.control;
 
+import java.util.Scanner;
+
 public class ControlStructures {
 
     enum myChar {
@@ -9,11 +11,21 @@ public class ControlStructures {
 
     public static void main(String[] args) {
         ControlStructures cntrlStructures = new ControlStructures();
+        cntrlStructures.ifCheck();
         cntrlStructures.ifElseCheck();
         cntrlStructures.forLoopCheck();
         cntrlStructures.forEachLoopCheck();
+        cntrlStructures.nestedIfCheck();
         cntrlStructures.whileLoopCheck();
         cntrlStructures.switchCheck();
+    }
+
+    public void ifCheck(){
+        int number = 10;
+
+        if (number > 10){
+            System.out.println(number + "is greater than 10");
+        }
     }
 
     public void ifElseCheck() {
@@ -24,6 +36,58 @@ public class ControlStructures {
         } else {
             System.out.println("Print if flag is false.");
         }
+    }
+
+    public void nestedIfCheck(){
+        int qualifiedSalary = 30000;
+        int employmentDuration = 2;
+
+        System.out.println("What is your yearly salary?");
+        Scanner scanner = new Scanner(System.in);
+        double salary = scanner.nextInt();
+
+        System.out.println("Emploment length?");
+        double yearsEmployed = scanner.nextInt();
+        scanner.close();
+
+        if(salary >= qualifiedSalary){
+            if (yearsEmployed >= employmentDuration){
+                System.out.println("Congratulations, your loan is approved");
+            }
+            else {
+                System.out.println("Sorry, your employment is less than " + employmentDuration
+                + " years");
+            }
+        }else {
+            System.out.println("Sorry, your salary is less than £" + qualifiedSalary);
+        }
+    }
+
+    public void ifElseIfCheck(){
+        System.out.println("Enter your test score:");
+        Scanner scanner = new Scanner(System.in);
+        int score = scanner.nextInt();
+        scanner.close();
+
+        char grade;
+
+        if(score < 60){
+            grade = 'F';
+        }
+        else if(score < 70){
+            grade = 'D';
+        }
+        else if (score < 80){
+            grade = 'C';
+        }
+        else if (score < 90){
+            grade = 'B';
+        }
+        else{
+            grade = 'A';
+        }
+
+        System.out.println("Your grade is: " + grade);
     }
 
     public void forLoopCheck() {
@@ -68,6 +132,8 @@ public class ControlStructures {
             case B:
                 System.out.println(nowChar);
                 break;
+            default:
+                System.out.println("Invalid property");
         }
     }
 }
