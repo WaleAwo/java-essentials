@@ -21,6 +21,8 @@ public class ControlStructures {
     }
 
     public void ifCheck(){
+    // Use the if statement to specify a block of Java code to be executed if a condition is true
+
         int number = 10;
 
         if (number > 10){
@@ -29,6 +31,8 @@ public class ControlStructures {
     }
 
     public void ifElseCheck() {
+    // Use the else statement to specify a block of code to be executed if the condition is false.
+
         boolean flag = true;
 
         if (flag) {
@@ -64,6 +68,8 @@ public class ControlStructures {
     }
 
     public void ifElseIfCheck(){
+    // Use the else if statement to specify a new condition if the first condition is false.
+
         System.out.println("Enter your test score:");
         Scanner scanner = new Scanner(System.in);
         int score = scanner.nextInt();
@@ -91,8 +97,13 @@ public class ControlStructures {
     }
 
     public void forLoopCheck() {
+   /* use the for loop instead of a while loop When you know exactly how many times you
+      want to loop through a block of code
+    */
+
         for (int i = 0; i < 5; i++) {
             System.out.println("i is: " + i);
+
             if (i == 3) {
                 break; // exit clause
             }
@@ -111,6 +122,8 @@ public class ControlStructures {
     }
 
     public void whileLoopCheck() {
+    // The while loop loops through a block of code as long as a specified condition is true
+
         int j = 5;
 
         while (j > 0) {
@@ -120,6 +133,33 @@ public class ControlStructures {
                 break;
             }
         }
+    }
+
+    public void doWhileCheck(){
+    /* This loop will execute the code block once, before checking if the condition is true,
+       then it will repeat the loop as long as the condition is true.
+     */
+
+        Scanner scanner = new Scanner(System.in);
+
+        boolean again =false;
+
+        do {
+            System.out.println("Enter the first number");
+            double num1 = scanner.nextDouble();
+
+            System.out.println("Enter the second number");
+            double num2 = scanner.nextDouble();
+
+            double total = num1 + num2;
+            System.out.println("The total is " + total);
+
+            System.out.println("Would you liek to start over?");
+            again = scanner.nextBoolean();
+
+        }while (again);
+
+        scanner.close();
     }
 
     public void switchCheck() {
