@@ -111,10 +111,13 @@ public class ControlStructures {
     }
 
     public void forEachLoopCheck() {
+    //  "for-each" loop is used exclusively to loop through elements in an array
+
         String[] myArray = {"a", "b", "c", "d"};
 
         for (String str : myArray) {
             System.out.println(str);
+
             if (str.equalsIgnoreCase("b")) {
                 break; // exit clause
             }
