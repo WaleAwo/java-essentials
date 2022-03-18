@@ -1,4 +1,4 @@
-package interviews;
+package tasks;
 
 public class NonRepeatableLetter {
     public static void main(String args[]) {

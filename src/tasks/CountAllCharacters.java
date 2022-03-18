@@ -1,4 +1,4 @@
-package interviews;
+package tasks;
 
 public class CountAllCharacters {
     public static void main(String[] args) {
