@@ -9,21 +9,21 @@ public class LotteryTicket {
     private static final int MAX_TICKET_NUMBER = 69;
 
     public static void main(String[] args) {
-        int[] ticket = generateNumbers(); // call the method & store numbers
+        int[] ticket = generateNumbers(); // calls the method & stores the numbers
         Arrays.sort(ticket);
         printTicket(ticket);
     }
 
     public static int[] generateNumbers() {
         int[] ticket = new int[LENGTH]; // create an array of numbers
-        Random random = new Random(); // generate a random number
+        Random random = new Random();
 
-        for (int i = 0; i < LENGTH; i++) {
+        for (int i=0; i<LENGTH; i++) {
             int randomNumber;
 
             /*
-            Search random numbers to ensure there are no duplicates. If it does,
-            regenerate numbers
+            Searches numbers to ensure there are no duplicates. If found,
+            the numbers are regenerate.
              */
             do {
                 randomNumber = random.nextInt(MAX_TICKET_NUMBER) + 1;
