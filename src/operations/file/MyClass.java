@@ -61,31 +61,5 @@ public class MyClass {
 
         // delete file
         file.delete();
-
-      /*
-      FileWriter & FileReader
-
-      // Write to file
-        try {
-            FileWriter fw = new FileWriter(file);
-            fw.write("First line");
-            fw.flush();
-            fw.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // Read from file
-        try {
-            FileReader fr = new FileReader(file);
-            int i;
-            while ((i = fr.read()) != -1){ // loop to read each character
-                System.out.print((char) i); // convert int to character then prints it to console
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        */
     }
 }
