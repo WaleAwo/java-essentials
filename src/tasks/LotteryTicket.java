@@ -14,8 +14,12 @@ public class LotteryTicket {
         printTicket(ticket);
     }
 
+    /**
+     * Creates an array of numbers that are unique and fall between 1-69
+     * @return an array of 6 random numbers
+     */
     public static int[] generateNumbers() {
-        int[] ticket = new int[LENGTH]; // create an array of numbers
+        int[] ticket = new int[LENGTH];
         Random random = new Random();
 
         for (int i=0; i<LENGTH; i++) {
@@ -23,8 +27,9 @@ public class LotteryTicket {
 
             /*
             Searches numbers to ensure there are no duplicates. If found,
-            the numbers are regenerate.
+            the numbers are regenerated.
              */
+
             do {
                 randomNumber = random.nextInt(MAX_TICKET_NUMBER) + 1;
             }while (search(ticket, randomNumber));
