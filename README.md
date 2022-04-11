@@ -1,3 +1,3 @@
-# java-essentials
+# Java Essentials
 
 Basic java concepts.
